@@ -22,7 +22,13 @@
 {foreach key=KEY item=ARRAY from=$TRANSACTIONS}
             <tr>
               <td class="text-center">{$ARRAY['account']|default:"Default"}</td>
-              <td class="text-center">{$ARRAY['address']|default:""}</td>
+              <td class="text-center">
+                {if !$GLOBAL.website.transactionexplorer.disabled}
+                <a href="{$GLOBAL.website.transactionexplorer.url}{$ARRAY['address']}">{$ARRAY['address']|default:""}</a>
+                {else}
+                {$ARRAY['address']|default:""}
+                {/if}
+              </td>
               <td class="text-center">{$ARRAY['category']|capitalize}</td>
               <td class="text-right">{$ARRAY['amount']|number_format:"$PRECISION"}</td>
               <td class="text-right">{$ARRAY['confirmations']}</td>
