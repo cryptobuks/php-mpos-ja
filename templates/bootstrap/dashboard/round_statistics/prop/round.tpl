@@ -60,4 +60,35 @@
               </div>
             </div>
           </div>
+           <div class="col-lg-2 col-sm-6">
+            <div class="circle-tile fade">
+              <div class="circle-tile-heading lightblue">
+                <i class="fa fa-sitemap fa-fw fa-2x"></i>
+              </div>
+              <div class="circle-tile-content lightblue">
+                <div class="circle-tile-description text-faded">
+                  <p class="h5" id="b-nextdiff">{if $GLOBAL.nethashrate > 0}{$NETWORK.EstNextDifficulty|number_format:"8"}{else}n/a{/if}</p>
+                </div>
+                <div class="circle-tile-number text-faded">
+                  <p class="h6">Est. Next Difficulty{if $GLOBAL.config.coindiffchangetarget|default:2016 > 1}{if $GLOBAL.nethashrate > 0}<br/>Change in {$NETWORK.BlocksUntilDiffChange} Blocks{else}No Estimates{/if}{/if}/予想難易度{if $GLOBAL.config.coindiffchangetarget|default:2016 > 1}{if $GLOBAL.nethashrate > 0}<br />次は{$NETWORK.BlocksUntilDiffChange}ブロック後に変更{else}No Estimates{/if}{/if}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="circle-tile fade">
+              <div class="circle-tile-heading lightblue">
+                <i class="fa fa-clock-o fa-fw fa-2x"></i>
+              </div>
+              <div class="circle-tile-content lightblue">
+                <div class="circle-tile-description text-faded">
+                  <p class="h5" id="b-esttimeperblock">{$NETWORK.EstTimePerBlock|seconds_to_hhmmss}</p>
+                </div>
+                <div class="circle-tile-number text-faded">
+                  <p class="h6">Est. Avg. Time per Block/予想ブロックタイム</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
