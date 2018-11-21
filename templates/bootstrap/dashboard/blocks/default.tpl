@@ -12,7 +12,7 @@
             <th class="text-center">Finder/発見者</th>
             <th class="text-right">Time/日時</th>
             <th class="text-right">Difficulty/難易度</th>
-            <th class="text-right">Amount/数量(IDOL)</th>
+            <th class="text-right">Amount/数量({$GLOBAL.config.currency})</th>
             <th class="text-right">Expected Shares/予想されるシェア</th>
             <th class="text-right">Actual Shares/実際のシェア</th>
             <th class="text-right">Percentage/%</th>
